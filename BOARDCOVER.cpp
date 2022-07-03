@@ -3,18 +3,17 @@
 #include <stdio.h>
 
 const int MAX_BOARD_SIZE = 22;
-const int BLOCK_TYPE = 12;
+const int BLOCK_TYPE = 4;
 
 char board[MAX_BOARD_SIZE][MAX_BOARD_SIZE];
 int H, W;
 
 // L자 모양 블록을 회전 시켰을 때 모든 모양
-int block1_X[BLOCK_TYPE] = {+1, +1, +1, +1, -1, -1, -1, -1, 0, 0, 0, 0};
-int block1_Y[BLOCK_TYPE] = {0, 0, 0, 0, 0, 0, 0, 0, +1, +1, -1, -1};
+int block1_X[BLOCK_TYPE] = {0,1,0,0};
+int block1_Y[BLOCK_TYPE] = {1,0,1,1};
 
-int block2_X[BLOCK_TYPE] = {0, +1, +1, 0, -1, 0, -1, +1, -1, +1, -1, +1};
-int block2_Y[BLOCK_TYPE] = {-1, -1, +1, +1, -1, -1, +1, +1, +1, +1, -1, -1};
-
+int block2_X[BLOCK_TYPE] = {1,1,1,-1};
+int block2_Y[BLOCK_TYPE] = {0,1,1,1};
 
 
 // 흰칸인 경우 블록을 넣을 곳으로 선택
