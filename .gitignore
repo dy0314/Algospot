@@ -45,3 +45,5 @@
 *.vsix
 .vscode/launch.json
 .vscode/settings.json
+.vscode/tasks.json
+BOARDCOVER.dSYM/Contents/Info.plist
