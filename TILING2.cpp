@@ -1,3 +1,5 @@
+/* https://www.algospot.com/judge/problem/read/TILING2 */
+
 #include <stdio.h>
 #include <memory.h>
 
@@ -11,12 +13,12 @@ int sol(int n)
     if(n == N)
         return 1;
     if(n > N)
-        return 0;
+        return 0; 
 
     int &ret = cache[n];
     if(ret != -1)
         return ret;
-    
+    // 타일을 세로로 쓰는 경우 + 타일을 가로로 2개 쓰는 경우
     ret = (sol(n+1) % MOD) + (sol(n+2) % MOD);
 
     return ret % MOD;
